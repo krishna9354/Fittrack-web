@@ -54,7 +54,7 @@ function About() {
               className="team-link"
             >
               <div className="team-card card">
-                <img src="" alt="Krishna Garg" />
+                <img src="fittrack\src\assets\krishna.jpg" alt="Krishna Garg" />
                 <div className="info">
                   <h4>Krishna Garg</h4>
                   <small>Team Leader</small>
@@ -71,7 +71,7 @@ function About() {
             >
               <div className="team-card card">
                 <img
-                  src=""
+                  src="fittrack\src\assets\pranay.jpg"
                   alt="Pranay Maheshwari"
                 />
                 <div className="info">
@@ -90,7 +90,7 @@ function About() {
             >
               <div className="team-card card">
                 <img
-                  src=""
+                  src="fittrack\src\assets\priyanshu.jpg"
                   alt="Priyanshu Singh"
                 />
                 <div className="info">
