@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./landing.css";
 
+// ✅ IMPORT LOCAL IMAGES (CORRECT WAY)
+import yogaImg from "../../assets/yoga.jpg";
+import lowerImg from "../../assets/lower.jpg";
+
 function Landing() {
   return (
     <>
@@ -72,22 +76,7 @@ function Landing() {
 
         <div className="grid-3">
           <div className="workout-card">
-            <img
-              src="https://www.guardian.in/cdn/shop/articles/best-hiit-workouts.jpg"
-              alt="HIIT Workout"
-            />
-            <h4>HIIT Cardio Blast</h4>
-            <p>30 min • Fat Burn</p>
-            <Link to="/login" className="btn-primary">
-              Login to Access
-            </Link>
-          </div>
-
-          <div className="workout-card">
-            <img
-              src="fittrack\src\assets\yoga.jpg"
-              alt="Yoga Workout"
-            />
+            <img src={yogaImg} alt="Yoga Workout" />
             <h4>Yoga Flow</h4>
             <p>60 min • Flexibility</p>
             <Link to="/login" className="btn-primary">
@@ -96,10 +85,7 @@ function Landing() {
           </div>
 
           <div className="workout-card">
-            <img
-              src="fittrack\src\assets\lower.jpg"
-              alt="Strength Workout"
-            />
+            <img src={lowerImg} alt="Strength Workout" />
             <h4>Lower Body Strength</h4>
             <p>45 min • Muscle Build</p>
             <Link to="/login" className="btn-primary">
