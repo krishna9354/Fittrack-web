@@ -1,12 +1,6 @@
 import "./about.css";
 import LoginNavbar from "../../components/LoginNavbar/LoginNavbar";
 
-// ✅ IMPORT TEAM IMAGES (CORRECT WAY)
-import krishnaImg from "../../assets/krishna.jpg";
-import pranayImg from "../../assets/pranay.jpg";
-import priyanshuImg from "../../assets/priyanshu.jpg";
-import princeImg from "../../assets/prince.jpg"; // optional placeholder
-
 function About() {
   return (
     <>
@@ -39,10 +33,7 @@ function About() {
           </div>
 
           <div className="about-image">
-            <img
-              src="https://images.unsplash.com/photo-1558611848-73f7eb4001d1?auto=format&fit=crop&w=1200&q=80"
-              alt="Gym"
-            />
+            <img src="/assets/gym.jpg" alt="Gym" />
           </div>
         </section>
 
@@ -51,69 +42,37 @@ function About() {
           <h3>Meet Our Team</h3>
 
           <div className="grid-4">
-            {/* KRISHNA GARG */}
-            <a
-              href="https://vite-portf.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="team-link"
-            >
-              <div className="team-card card">
-                <img src={krishnaImg} alt="Krishna Garg" />
-                <div className="info">
-                  <h4>Krishna Garg</h4>
-                  <small>Team Leader</small>
-                </div>
+            <div className="team-card card">
+              <img src="/assets/krishna.jpg" alt="Krishna Garg" />
+              <div className="info">
+                <h4>Krishna Garg</h4>
+                <small>Team Leader</small>
               </div>
-            </a>
+            </div>
 
-            {/* PRANAY MAHESHWARI */}
-            <a
-              href="https://pranay1307.github.io/myportfolio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="team-link"
-            >
-              <div className="team-card card">
-                <img src={pranayImg} alt="Pranay Maheshwari" />
-                <div className="info">
-                  <h4>Pranay Maheshwari</h4>
-                  <small>Team Member</small>
-                </div>
+            <div className="team-card card">
+              <img src="/assets/pranay.jpg" alt="Pranay Maheshwari" />
+              <div className="info">
+                <h4>Pranay Maheshwari</h4>
+                <small>Team Member</small>
               </div>
-            </a>
+            </div>
 
-            {/* PRIYANSHU SINGH */}
-            <a
-              href="https://priyanshurai0708-alt.github.io/MY_PORTFOLIO/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="team-link"
-            >
-              <div className="team-card card">
-                <img src={priyanshuImg} alt="Priyanshu Singh" />
-                <div className="info">
-                  <h4>Priyanshu Singh</h4>
-                  <small>Team Member</small>
-                </div>
+            <div className="team-card card">
+              <img src="/assets/priyanshu.jpg" alt="Priyanshu Singh" />
+              <div className="info">
+                <h4>Priyanshu Singh</h4>
+                <small>Team Member</small>
               </div>
-            </a>
+            </div>
 
-            {/* PRINCE PAL */}
-            <a
-              href="https://prince-jod.github.io/Portfolio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="team-link"
-            >
-              <div className="team-card card">
-                <img src={princeImg} alt="Prince Pal" />
-                <div className="info">
-                  <h4>Prince Pal</h4>
-                  <small>Team Member</small>
-                </div>
+            <div className="team-card card">
+              <img src="/assets/prince.jpg" alt="Prince Pal" />
+              <div className="info">
+                <h4>Prince Pal</h4>
+                <small>Team Member</small>
               </div>
-            </a>
+            </div>
           </div>
         </section>
 
