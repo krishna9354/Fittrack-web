@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
 
+// ✅ IMPORT IMAGE CORRECTLY
+import signupImg from "../../assets/login.webp";
+
 function Signup() {
   const [role, setRole] = useState("member");
   const [name, setName] = useState("");
@@ -14,17 +17,14 @@ function Signup() {
   const handleSignup = (e) => {
     e.preventDefault();
 
-    // 1️⃣ Get existing users
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // 2️⃣ Prevent duplicate signup
     const alreadyExists = users.find((u) => u.email === email);
     if (alreadyExists) {
       alert("User already exists. Please login.");
       return;
     }
 
-    // 3️⃣ Create user object
     const newUser = {
       name,
       email,
@@ -33,16 +33,13 @@ function Signup() {
       certificationId: role === "trainer" ? certId : null,
     };
 
-    // 4️⃣ Save users list
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    // 5️⃣ Save login session
     localStorage.setItem("token", "true");
     localStorage.setItem("role", role);
     localStorage.setItem("currentUser", JSON.stringify(newUser));
 
-    // 6️⃣ Redirect
     if (role === "trainer") {
       navigate("/TrainerHome");
     } else {
@@ -76,9 +73,7 @@ function Signup() {
             <div className="signup-left">
               <div className="card">
                 <h2>
-                  {role === "trainer"
-                    ? "Trainer Signup"
-                    : "Member Signup"}
+                  {role === "trainer" ? "Trainer Signup" : "Member Signup"}
                 </h2>
 
                 {/* ROLE SWITCH */}
@@ -149,12 +144,9 @@ function Signup() {
               </div>
             </div>
 
-            {/* IMAGE */}
+            {/* ✅ FIXED IMAGE */}
             <div className="signup-right">
-              <img
-                src="fittrack\src\assets\login.webp"
-                alt="Signup"
-              />
+              <img src={signupImg} alt="Signup" />
             </div>
           </section>
         </div>
