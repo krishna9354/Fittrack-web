@@ -85,7 +85,7 @@ function Landing() {
 
           <div className="workout-card">
             <img
-              src="https://media.post.rvohealth.io/wp-content/uploads/sites/2/2020/06/GRT-female-yoga-at-home.jpg"
+              src="fittrack\src\assets\yoga.jpg"
               alt="Yoga Workout"
             />
             <h4>Yoga Flow</h4>
@@ -97,7 +97,7 @@ function Landing() {
 
           <div className="workout-card">
             <img
-              src="https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/02/1109-Barbell-Back-Squat.jpg"
+              src="fittrack\src\assets\lower.jpg"
               alt="Strength Workout"
             />
             <h4>Lower Body Strength</h4>
